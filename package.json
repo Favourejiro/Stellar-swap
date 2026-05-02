@@ -1,0 +1,11 @@
+{
+  "name": "stellar-swap",
+  "private": true,
+  "workspaces": ["frontend"],
+  "scripts": {
+    "dev": "npm run dev --workspace=frontend",
+    "build": "npm run build --workspace=frontend",
+    "contract:build": "cd contracts/liquidity_pool && cargo build --target wasm32-unknown-unknown --release",
+    "contract:test": "cd contracts/liquidity_pool && cargo test"
+  }
+}
